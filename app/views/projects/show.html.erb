@@ -5,6 +5,10 @@
 
 <%= title(@project.name, "Projects") %>
 <h2><%= @project.name %> </h2>
+<%= link_to "New Ticket", new_project_ticket_path(@project)%>
+<p>
 <%= link_to "Edit Project", edit_project_path %>
 <%= link_to "Delete Project", @project, :method => :delete,
     :confirm => "Are you sure?" %>
+<%= link_to "Project List", projects_path %>
+</p>
