@@ -11,4 +11,11 @@
 <%= link_to "Delete Project", @project, :method => :delete,
     :confirm => "Are you sure?" %>
 <%= link_to "Project List", projects_path %>
+<ul id='tickets'>
+	<% @project.tickets.each do |ticket| %>
+		<li>
+			#<%= ticket.id %> - <%= link_to ticket.title, [@project, ticket] %>
+		</li>
+	<% end %>
+</ul>
 </p>
